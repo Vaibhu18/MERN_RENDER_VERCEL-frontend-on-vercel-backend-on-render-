@@ -5,7 +5,10 @@ import mongodbConnection from "./utils/mongodb.connection.js";
 import userRouter from "./routes/user.routes.js";
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: ["https://mern-render-vercel-client.vercel.app"],
+    credentials: true
+}));
 app.use(express.json())
 mongodbConnection();
 
