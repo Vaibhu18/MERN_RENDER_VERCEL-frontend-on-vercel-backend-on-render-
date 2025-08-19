@@ -6,7 +6,7 @@ import userRouter from "./routes/user.routes.js";
 
 const app = express();
 app.use(cors({
-    origin: ["https://mern-render-vercel-client.vercel.app"],
+    origin: ["http://localhost:5173/","https://mern-render-vercel-client.vercel.app"],
     credentials: true
 }));
 app.use(express.json())
